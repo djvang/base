@@ -1,0 +1,202 @@
+/* ========================================================================
+   Component: Button
+ ========================================================================== */
+/*
+ * 1. Remove margins in Chrome, Safari and Opera.
+ * 2. Remove borders for `button`.
+ * 3. Address `overflow` set to `hidden` in IE.
+ * 4. Correct `font` properties and `color` not being inherited for `button`.
+ * 5. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 6. Remove default style for `input type="submit"`in iOS.
+ * 7. Style
+ * 8. `line-height` is used to create a height because it also centers the text vertically for `a` elements.
+ *    Better would be to use height and flexbox to center the text vertically but flexbox doesn't work in Firefox on `button` elements.
+ * 9. Align text if button has a width
+ * 10. Required for `a`.
+ */
+.button {
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  border: none;
+  /* 3 */
+  overflow: visible;
+  /* 4 */
+  font: inherit;
+  color: inherit;
+  /* 5 */
+  text-transform: none;
+  /* 6 */
+  -webkit-appearance: none;
+  border-radius: 0;
+  /* 7 */
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: 16px;
+  /* 8 */
+  line-height: 40px;
+  /* 9 */
+  text-align: center;
+  /* 10 */
+  text-decoration: none;
+}
+.button:not(:disabled) {
+  cursor: pointer;
+}
+/*
+ * Remove the inner border and padding in Firefox.
+ */
+.button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* Hover */
+.button:hover {
+  /* 9 */
+  text-decoration: none;
+}
+/* Focus */
+.button:focus {
+  outline: none;
+}
+/* OnClick + Active */
+/* Style modifiers
+ ========================================================================== */
+/*
+ * Default
+ */
+.button-default {
+  background-color: #f8f8f8;
+  color: #333;
+}
+/* Hover + Focus */
+.button-default:hover,
+.button-default:focus {
+  background-color: #ebebeb;
+  color: #333;
+}
+/* OnClick + Active */
+.button-default:active,
+.button-default.active {
+  background-color: #dfdfdf;
+  color: #333;
+}
+/*
+ * Primary
+ */
+.button-primary {
+  background-color: #1e87f0;
+  color: #fff;
+}
+/* Hover + Focus */
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #0f7ae5;
+  color: #fff;
+}
+/* OnClick + Active */
+.button-primary:active,
+.button-primary.active {
+  background-color: #0e6dcd;
+  color: #fff;
+}
+/*
+ * Secondary
+ */
+.button-secondary {
+  background-color: #222;
+  color: #fff;
+}
+/* Hover + Focus */
+.button-secondary:hover,
+.button-secondary:focus {
+  background-color: #151515;
+  color: #fff;
+}
+/* OnClick + Active */
+.button-secondary:active,
+.button-secondary.active {
+  background-color: #080808;
+  color: #fff;
+}
+/*
+ * Danger
+ */
+.button-danger {
+  background-color: #f0506e;
+  color: #fff;
+}
+/* Hover + Focus */
+.button-danger:hover,
+.button-danger:focus {
+  background-color: #ee395b;
+  color: #fff;
+}
+/* OnClick + Active */
+.button-danger:active,
+.button-danger.active {
+  background-color: #ec2147;
+  color: #fff;
+}
+/*
+ * Disabled
+ * The same for all style modifiers
+ */
+.button-default:disabled,
+.button-primary:disabled,
+.button-secondary:disabled,
+.button-danger:disabled {
+  background-color: #f8f8f8;
+  color: #999;
+}
+
+/* Text modifiers
+ ========================================================================== */
+/*
+ * Text
+ * 1. Reset
+ * 2. Style
+ */
+.button-text {
+  /* 1 */
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  /* 2 */
+  color: #999;
+}
+/* Hover + Focus */
+.button-text:hover,
+.button-text:focus {
+  color: #666;
+}
+/* Disabled */
+.button-text:disabled {
+  color: #999;
+}
+/*
+ * Link
+ * 1. Reset
+ * 2. Style
+ */
+.button-link {
+  /* 1 */
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  /* 2 */
+  color: #1e87f0;
+}
+/* Hover + Focus */
+.button-link:hover,
+.button-link:focus {
+  color: #0f6ecd;
+  text-decoration: underline;
+}
+/* Disabled */
+.button-link:disabled {
+  color: #999;
+  text-decoration: none;
+}

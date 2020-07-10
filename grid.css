@@ -1,0 +1,45 @@
+/*
+ * 1. Allow cells to wrap into the next line
+ * 2. Reset list
+ */
+.grid {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*
+ * Grid cell
+ * Note: Space is allocated solely based on content dimensions, but shrinks: 0 1 auto
+ * Reset margin for e.g. paragraphs
+ */
+.grid > * {
+  margin: 0;
+}
+/*
+ * Remove margin from the last-child
+ */
+.grid > * > :last-child {
+  margin-bottom: 0;
+}
+/* Gutter
+ ========================================================================== */
+/*
+ * Default
+ */
+/* Horizontal */
+.grid {
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.grid > * {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+/* Vertical */
+.grid + .grid {
+  margin-top: 30px;
+}

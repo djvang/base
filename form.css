@@ -1,0 +1,500 @@
+/*
+ * 1. Define consistent box sizing.
+ *    Default is `content-box` with following exceptions set to `border-box`
+ *    `select`, `input[type="checkbox"]` and `input[type="radio"]`
+ *    `input[type="search"]` in Chrome, Safari and Opera
+ *    `input[type="color"]` in Firefox
+ * 2. Address margins set differently in Firefox/IE and Chrome/Safari/Opera.
+ * 3. Remove `border-radius` in iOS.
+ * 4. Change font properties to `inherit` in all browsers.
+ */
+.input,
+.select,
+.textarea,
+.radio,
+.checkbox {
+  /* 1 */
+  box-sizing: border-box;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  border-radius: 0;
+  /* 4 */
+  font: inherit;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+* + .form-group {
+  margin-top: 20px;
+}
+
+/*
+  * Show the overflow in Edge.
+  */
+.input {
+  overflow: visible;
+}
+/*
+  * Remove the inheritance of text transform in Firefox.
+  */
+.select {
+  text-transform: none;
+}
+/*
+  * 1. Change font properties to `inherit` in all browsers
+  * 2. Don't inherit the `font-weight` and use `bold` instead.
+  * NOTE: Both declarations don't work in Chrome, Safari and Opera.
+  */
+.select optgroup {
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  font-weight: bold;
+}
+/*
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+.textarea {
+  overflow: auto;
+}
+/*
+  * Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
+  */
+.input[type="search"]::-webkit-search-cancel-button,
+.input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/*
+  * Removes placeholder transparency in Firefox.
+  */
+.input::-moz-placeholder,
+.textarea::-moz-placeholder {
+  opacity: 1;
+}
+/*
+  * Improves consistency of cursor style for clickable elements
+  */
+.radio:not(:disabled),
+.checkbox:not(:disabled) {
+  cursor: pointer;
+}
+/*
+  * Define consistent border, margin, and padding.
+  */
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* Input, select and textarea
+  * Allowed: `text`, `password`, `datetime`, `datetime-local`, `date`,  `month`,
+             `time`, `week`, `number`, `email`, `url`, `search`, `tel`, `color`
+  * Disallowed: `range`, `radio`, `checkbox`, `file`, `submit`, `reset` and `image`
+  ========================================================================== */
+/*
+  * Remove default style in iOS.
+  */
+.input,
+.textarea {
+  -webkit-appearance: none;
+}
+/*
+  * 1. Prevent content overflow if a fixed width is used
+  * 2. Take the full width
+  * 3. Reset default
+  * 4. Style
+  */
+.input,
+.select,
+.textarea {
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  border: 0 none;
+  /* 4 */
+  padding: 0 10px;
+  background: #f8f8f8;
+  color: #666;
+}
+/*
+  * Single-line
+  * 1. Allow any element to look like an `input` or `select` element
+  * 2. Make sure line-height is not larger than height
+  *    Also needed to center the text vertically
+  */
+.input,
+.select:not([multiple]):not([size]) {
+  height: 40px;
+  vertical-align: middle;
+  /* 1 */
+  display: inline-block;
+}
+/* 2 */
+.input:not(input),
+.select:not(select) {
+  line-height: 40px;
+}
+/*
+  * Multi-line
+  */
+.select[multiple],
+.select[size],
+.textarea {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  vertical-align: top;
+}
+/* Focus */
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  background-color: #f8f8f8;
+  color: #666;
+}
+/* Disabled */
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  background-color: #f8f8f8;
+  color: #999;
+}
+/*
+  * Placeholder
+  */
+.input::-ms-input-placeholder {
+  color: #999 !important;
+}
+.input::placeholder {
+  color: #999;
+}
+.textarea::-ms-input-placeholder {
+  color: #999 !important;
+}
+.textarea::placeholder {
+  color: #999;
+}
+/* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
+  ========================================================================== */
+/*
+  * Small
+  */
+.form-small {
+  font-size: 0.875rem;
+}
+.form-small:not(textarea):not([multiple]):not([size]) {
+  height: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.form-small:not(select):not(input):not(textarea) {
+  line-height: 30px;
+}
+/*
+  * Large
+  */
+.form-large {
+  font-size: 1.25rem;
+}
+.form-large:not(textarea):not([multiple]):not([size]) {
+  height: 55px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.form-large:not(select):not(input):not(textarea) {
+  line-height: 55px;
+}
+
+/* Select
+  ========================================================================== */
+/*
+  * 1. Remove default style. Also works in Firefox
+  * 2. Style
+  * 3. Remove default style in IE 10/11
+  * 4. Set `color` for options in the select dropdown, because the inherited `color` might be too light.
+  */
+.select:not([multiple]):not([size]) {
+  /* 1 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 2 */
+  padding-right: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+/* 3 */
+.select:not([multiple]):not([size])::-ms-expand {
+  display: none;
+}
+/* 4 */
+.select:not([multiple]):not([size]) option {
+  color: #444;
+}
+/*
+  * Disabled
+  */
+.select:not([multiple]):not([size]):disabled {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+/* Datalist
+  ========================================================================== */
+/*
+  * 1. Remove default style in Chrome
+  */
+.input[list] {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+.input[list]:hover,
+.input[list]:focus {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+/* 1 */
+.input[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+/* Radio and checkbox
+  * Note: Does not work in IE11
+  ========================================================================== */
+/*
+  * 1. Style
+  * 2. Make box more robust so it clips the child element
+  * 3. Vertical alignment
+  * 4. Remove default style
+  * 5. Fix black background on iOS
+  * 6. Center icons
+  */
+.radio,
+.checkbox {
+  /* 1 */
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  /* 2 */
+  overflow: hidden;
+  /* 3 */
+  margin-top: -4px;
+  vertical-align: middle;
+  /* 4 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 5 */
+  background-color: #ebebeb;
+  /* 6 */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.radio {
+  border-radius: 50%;
+}
+/* Focus */
+.radio:focus,
+.checkbox:focus {
+  outline: none;
+}
+/*
+  * Checked
+  */
+.radio:checked,
+.checkbox:checked,
+.checkbox:indeterminate {
+  background-color: #1e87f0;
+}
+/* Focus */
+.radio:checked:focus,
+.checkbox:checked:focus,
+.checkbox:indeterminate:focus {
+  background-color: #0e6dcd;
+}
+/*
+  * Icons
+  */
+.radio:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23fff%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+.checkbox:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.checkbox:indeterminate {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23fff%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+/*
+  * Disabled
+  */
+.radio:disabled,
+.checkbox:disabled {
+  background-color: #f8f8f8;
+}
+.radio:disabled:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+.checkbox:disabled:checked {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.checkbox:disabled:indeterminate {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23999%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+}
+/* Legend
+  ========================================================================== */
+/*
+  * Legend
+  * 1. Behave like block element
+  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 3. Remove padding so people aren't caught out if they zero out fieldsets.
+  * 4. Style
+  */
+.legend {
+  /* 1 */
+  width: 100%;
+  /* 2 */
+  color: inherit;
+  /* 3 */
+  padding: 0;
+  /* 4 */
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/*
+ * 1. Normalize and defaults
+ * 2. Prevent content overflow if a fixed width is used
+ * 3. Take the full width
+ * 4. Remove default style
+ * 5. Remove white background in Chrome
+ * 6. Remove padding in IE11
+ */
+.range {
+  /* 1 */
+  box-sizing: border-box;
+  margin: 0;
+  vertical-align: middle;
+  /* 2 */
+  max-width: 100%;
+  /* 3 */
+  width: 100%;
+  /* 4 */
+  -webkit-appearance: none;
+  /* 5 */
+  background: transparent;
+  /* 6 */
+  padding: 0;
+}
+/* Focus */
+.range:focus {
+  outline: none;
+}
+.range::-moz-focus-outer {
+  border: none;
+}
+/* IE11 Reset */
+.range::-ms-track {
+  height: 15px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+/*
+ * Improves consistency of cursor style for clickable elements
+ */
+.range:not(:disabled)::-webkit-slider-thumb {
+  cursor: pointer;
+}
+.range:not(:disabled)::-moz-range-thumb {
+  cursor: pointer;
+}
+.range:not(:disabled)::-ms-thumb {
+  cursor: pointer;
+}
+/* Thumb
+ ========================================================================== */
+/*
+ * 1. Reset
+ * 2. Style
+ */
+/* Webkit */
+.range::-webkit-slider-thumb {
+  /* 1 */
+  -webkit-appearance: none;
+  margin-top: -7px;
+  /* 2 */
+  height: 15px;
+  width: 15px;
+  border-radius: 500px;
+  background: #666;
+}
+/* Firefox */
+.range::-moz-range-thumb {
+  /* 1 */
+  border: none;
+  /* 2 */
+  height: 15px;
+  width: 15px;
+  border-radius: 500px;
+  background: #666;
+}
+/* Edge */
+.range::-ms-thumb {
+  /* 1 */
+  margin-top: 0;
+}
+/* IE11 */
+.range::-ms-thumb {
+  /* 1 */
+  border: none;
+  /* 2 */
+  height: 15px;
+  width: 15px;
+  border-radius: 500px;
+  background: #666;
+}
+/* Edge + IE11 */
+.range::-ms-tooltip {
+  display: none;
+}
+/* Track
+ ========================================================================== */
+/*
+ * 1. Safari doesn't have a focus state. Using active instead.
+ */
+/* Webkit */
+.range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #ebebeb;
+}
+.range:focus::-webkit-slider-runnable-track,
+.range:active::-webkit-slider-runnable-track {
+  background: #d2d2d2;
+}
+/* Firefox */
+.range::-moz-range-track {
+  height: 3px;
+  background: #ebebeb;
+}
+.range:focus::-moz-range-track {
+  background: #d2d2d2;
+}
+/* Edge */
+.range::-ms-fill-lower,
+.range::-ms-fill-upper {
+  height: 3px;
+  background: #ebebeb;
+}
+.range:focus::-ms-fill-lower,
+.range:focus::-ms-fill-upper {
+  background: #d2d2d2;
+}

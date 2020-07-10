@@ -1,0 +1,109 @@
+/* Equal child widths
+ ========================================================================== */
+[class*="uk-child-width"] > * {
+  width: 100%;
+}
+.child-width-1-2 > * {
+  width: 50%;
+}
+.child-width-1-3 > * {
+  width: calc(100% * 1 / 3.001);
+}
+.child-width-1-4 > * {
+  width: 25%;
+}
+.child-width-1-5 > * {
+  width: 20%;
+}
+.child-width-1-6 > * {
+  width: calc(100% * 1 / 6.001);
+}
+.child-width-auto > * {
+  width: auto;
+}
+/*
+ * 1. Reset the `min-width`, which is set to auto by default, because
+ *    flex items won't shrink below their minimum intrinsic content size.
+ *    Using `1px` instead of `0`, so items still wrap into the next line,
+ *    if they have zero width and padding and the predecessor is 100% wide.
+ */
+.child-width-expand > :not([class*="uk-width"]) {
+  flex: 1;
+  /* 1 */
+  min-width: 1px;
+}
+
+/* Single Widths
+ ========================================================================== */
+/*
+ * 1. `max-width` is needed for the pixel-based classes
+ */
+[class*="uk-width"] {
+  box-sizing: border-box;
+  width: 100%;
+  /* 1 */
+  max-width: 100%;
+}
+/* Halves */
+.width-1-2 {
+  width: 50%;
+}
+/* Thirds */
+.width-1-3 {
+  width: calc(100% * 1 / 3.001);
+}
+.width-2-3 {
+  width: calc(100% * 2 / 3.001);
+}
+/* Quarters */
+.width-1-4 {
+  width: 25%;
+}
+.width-3-4 {
+  width: 75%;
+}
+/* Fifths */
+.width-1-5 {
+  width: 20%;
+}
+.width-2-5 {
+  width: 40%;
+}
+.width-3-5 {
+  width: 60%;
+}
+.width-4-5 {
+  width: 80%;
+}
+/* Sixths */
+.width-1-6 {
+  width: calc(100% * 1 / 6.001);
+}
+.width-5-6 {
+  width: calc(100% * 5 / 6.001);
+}
+/* Pixel */
+.width-small {
+  width: 150px;
+}
+.width-medium {
+  width: 300px;
+}
+.width-large {
+  width: 450px;
+}
+.width-xlarge {
+  width: 600px;
+}
+.width-2xlarge {
+  width: 750px;
+}
+/* Auto */
+.width-auto {
+  width: auto;
+}
+/* Expand */
+.width-expand {
+  flex: 1;
+  min-width: 1px;
+}
